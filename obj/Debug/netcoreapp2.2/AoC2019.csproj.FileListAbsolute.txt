@@ -1,0 +1,11 @@
+C:\Git\AoC2019\bin\Debug\netcoreapp2.2\AoC2019.deps.json
+C:\Git\AoC2019\bin\Debug\netcoreapp2.2\AoC2019.runtimeconfig.json
+C:\Git\AoC2019\bin\Debug\netcoreapp2.2\AoC2019.runtimeconfig.dev.json
+c:\Git\AoC2019\bin\Debug\netcoreapp2.2\AoC2019.dll
+c:\Git\AoC2019\bin\Debug\netcoreapp2.2\AoC2019.pdb
+c:\Git\AoC2019\obj\Debug\netcoreapp2.2\AoC2019.csprojAssemblyReference.cache
+c:\Git\AoC2019\obj\Debug\netcoreapp2.2\AoC2019.csproj.CoreCompileInputs.cache
+c:\Git\AoC2019\obj\Debug\netcoreapp2.2\AoC2019.AssemblyInfoInputs.cache
+c:\Git\AoC2019\obj\Debug\netcoreapp2.2\AoC2019.AssemblyInfo.cs
+c:\Git\AoC2019\obj\Debug\netcoreapp2.2\AoC2019.dll
+c:\Git\AoC2019\obj\Debug\netcoreapp2.2\AoC2019.pdb
