@@ -6,7 +6,7 @@ namespace AoC2019.Day01
     {
         public void Part01()
         {
-            var input = System.IO.File.ReadLines("Day01\\input.txt");
+            var input = System.IO.File.ReadLines("Day01//input.txt");
             var totalFuel = 0;
 
             foreach (var mass in input)
@@ -19,7 +19,23 @@ namespace AoC2019.Day01
 
         public void Part02()
         {
-            
+            var input = System.IO.File.ReadLines("Day01//input.txt");
+            var moduleFuel = 0;
+            var totalFuel = 0;
+            foreach (var mass in input)
+            {
+                var fuel = int.Parse(mass) / 3 - 2;
+                while(fuel >= 0)
+                {
+                    fuel = fuel / 3 - 2;
+                    if(fuel > 0)
+                    {
+                        moduleFuel = moduleFuel + fuel;
+                    }
+                }
+                totalFuel = totalFuel + moduleFuel;
+            }
+            Console.WriteLine("Total fuel requirement: " + totalFuel);
         }
     }
 }

@@ -8,7 +8,7 @@ namespace AoC2019
         static void Main(string[] args)
         {
             var day01 = new Day01Sol();
-            day01.Part01();
+            day01.Part02();
         }
     }
 }
