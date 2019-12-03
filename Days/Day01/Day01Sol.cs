@@ -1,6 +1,6 @@
 using System;
 
-namespace AoC2019.Day01
+namespace AoC2019.Days.Day01
 {
     public class Day01Sol
     {
@@ -19,7 +19,7 @@ namespace AoC2019.Day01
 
         public void Part02()
         {
-            var input = System.IO.File.ReadLines("Day01//input.txt");
+            var input = System.IO.File.ReadLines("Days//Day01//input.txt");
             var moduleFuel = 0;
             var totalFuel = 0;
 
