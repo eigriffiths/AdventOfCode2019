@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 
 namespace AoC2019.Days.Day02 {
     
@@ -8,24 +9,31 @@ namespace AoC2019.Days.Day02 {
         {
             // opcodes: 01 - adds, 02 - multiplies, 99 - halt
 
-            string[] input = System.IO.File.ReadAllLines("Days//Day02//input.txt");
-            foreach (string line in input)
-            {
-                string[] col = line.Split(',');
-            }
+            var input = System.IO.File.ReadAllText("Days//Day02//input.txt").Split(',');
+            var data = input.Select(int.Parse).ToArray();
 
-            switch (1)
+            var opcode = 0;
+            var input1Pos = data[opcode + 1];
+            var input2Pos = data[opcode + 2];
+            var outputPos = data[opcode + 3];
+
+            while(true)
+            {
+                calc(opcode, input1Pos, input2Pos);
+                outputPos += 4;
+            }
+        }
+
+        public bool calc(int opcode, int input1Pos, int input2Pos)
+        {
+            switch (opcode)
             {
                 case 1:
-                // Replace
-                    Console.WriteLine("opcode 1");
-                    break;
+                    data[outputPos] = input1Pos + input2Pos; return false;
                 case 2:
-                // Replace
-                    Console.WriteLine("opcode 2");
-                    break;
+                    data[outputPos] = input1Pos * input2Pos; return false;
                 case 99:
-                    break;
+                    return true;
             }
         }
     }
