@@ -10,29 +10,39 @@ namespace AoC2019.Days.Day02 {
             // opcodes: 01 - adds, 02 - multiplies, 99 - halt
 
             var input = System.IO.File.ReadAllText("Days//Day02//input.txt").Split(',');
-            //var opcodes = input.Select(int.Parse).ToArray();
-            int[] opcodes = new int[] {1, 9, 10, 3, 2, 3, 11, 0, 99, 30, 40, 50};
+            var opcodes = input.Select(int.Parse).ToArray();
             var opcodePos = 0;
+            var inputValue = 0;
 
-            for (int i = opcodes[opcodePos]; i != 99; opcodePos += 4)
+            while(inputValue != 99)
             {
-                switch (i)
+                var firstValuePos = opcodes[opcodePos + 1];
+                var secondValuePos = opcodes[opcodePos + 2];
+                var thridValuePos = opcodes[opcodePos + 3];
+                inputValue = opcodes[opcodePos];
+                firstValuePos = opcodes[firstValuePos];
+                secondValuePos = opcodes[secondValuePos];
+                thridValuePos = opcodes[thridValuePos];
+
+                switch (inputValue)
                 {
                     case 1:
-                    // Replace
-                        Console.WriteLine("opcode 1");
+                        opcodes[thridValuePos] = firstValuePos + secondValuePos;
                         break;
                     case 2:
-                    // Replace
-                        Console.WriteLine("opcode 2");
+                        opcodes[thridValuePos] = firstValuePos * secondValuePos;
                         break;
                     case 99:
+                        Console.WriteLine("99 reached...");
                         break;
                     default:
-                        Console.WriteLine("ended");
+                        Console.WriteLine("Error");
                         break;
                 }
+                opcodePos += 4;
             }
+
+            
         }
     }
 }
